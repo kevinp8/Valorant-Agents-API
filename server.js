@@ -520,7 +520,7 @@ app.listen(process.env.PORT || PORT, () => {
 })
 
 app.get('/', (req, res)=> {
-    res.send('go to /api/(agent name or role)')
+    res.send('go to /api/(agent name)')
 })
 
 app.get('/api', (req, res) => {
