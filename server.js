@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const cors = require('cors')
+const PORT = 3000
+
+app.use(cors())
 
 const agents = [
     {brimstone: {
@@ -512,7 +515,7 @@ const agents = [
     }},
 ]
 
-app.listen(port, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log('Server now live')
 })
 
